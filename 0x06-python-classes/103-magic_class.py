@@ -1,30 +1,21 @@
 #!/usr/bin/python3
-""" defines a square """
+"""Defines a class MagicClass"""
+import math
 
 
-class Square:
-    """ square with private instance attribute size """
-
-    def __init__(self, size=0):
-        """
-        initializes square
-        Args:
-            size: size of side of square
-        """
-
-        if type(size) is int:
-            if size < 0:
-                raise ValueError('size must be >= 0')
-            else:
-                self.__size = size
-        else:
-            raise TypeError('size must be an integer')
+class MagicClass:
+    """This represents a circle"""
+    def __init__(self, radius=0):
+        """Initializes the Magic Class"""
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError('radius must be a number')
+        self.__radius = radius
 
     def area(self):
-        """
-        finds area of square
-        Returns:
-            the area of the square
-        """
+        """Calculaes the area of the circle"""
+        return (self.__radius ** 2) * math.pi
 
-        return self.__size ** 2
+    def circumference(self):
+        """Calculates the circumference of the circle"""
+        return 2 * math.pi * self.__radius
