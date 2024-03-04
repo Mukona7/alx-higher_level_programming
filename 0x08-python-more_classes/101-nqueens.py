@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # 101-nqueens.py
+# Ekun-Thomas F <ekun_tee@yahoo.com>
 """Solves the N-queens puzzle.
 Determines all possible solutions to placing N
 N non-attacking queens on an NxN chessboard.
